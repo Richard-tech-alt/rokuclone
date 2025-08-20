@@ -1,0 +1,180 @@
+// import { useState } from "react"
+
+// const navItems = [
+//   { name: "Home", active: true },
+//   { name: "Getting Started", active: false },
+//   { name: "Troubleshooting", active: false },
+//   { name: "Contact", active: false },
+// ]
+
+// export default function Navigation() {
+//   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+//   return (
+//     <nav className="bg-white shadow-sm border-b">
+//       <div className="container mx-auto px-4 max-w-6xl">
+//         <div className="flex items-center justify-between h-16">
+//           {/* Logo */}
+//           <div className="flex-shrink-0">
+//             <h1 className="text-2xl font-bold text-purple-700">Roku Support</h1>
+//           </div>
+
+//           {/* Desktop Navigation */}
+//           <div className="hidden md:block">
+//             <div className="flex items-center space-x-1">
+//               {navItems.map((item) => (
+//                 <button
+//                   key={item.name}
+//                   className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+//                     item.active ? "bg-purple-700 text-white" : "text-gray-700 hover:text-purple-700 hover:bg-gray-100"
+//                   }`}
+//                 >
+//                   {item.name}
+//                 </button>
+//               ))}
+//             </div>
+//           </div>
+
+//           {/* Mobile menu button */}
+//           <div className="md:hidden">
+//             <button
+//               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+//               className="text-gray-700 hover:text-purple-700 focus:outline-none focus:text-purple-700"
+//             >
+//               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+//                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+//               </svg>
+//             </button>
+//           </div>
+//         </div>
+
+//         {/* Mobile Navigation */}
+//         {mobileMenuOpen && (
+//           <div className="md:hidden border-t">
+//             <div className="px-2 pt-2 pb-3 space-y-1">
+//               {navItems.map((item) => (
+//                 <button
+//                   key={item.name}
+//                   className={`block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors ${
+//                     item.active ? "bg-purple-700 text-white" : "text-gray-700 hover:text-purple-700 hover:bg-gray-100"
+//                   }`}
+//                 >
+//                   {item.name}
+//                 </button>
+//               ))}
+//             </div>
+//           </div>
+//         )}
+//       </div>
+//     </nav>
+//   )
+// }
+
+
+
+
+import type React from "react"
+import { useState } from "react"
+import { Menu, X } from "lucide-react"
+import LoadingScreen from "./LoadingScreen"
+
+const Navigation: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
+  const [currentPage, setCurrentPage] = useState("Home")
+
+  const navigationItems = [
+    { name: "Home", href: "#home" },
+    { name: "Getting Started", href: "#getting-started" },
+    { name: "Troubleshooting", href: "#troubleshooting" },
+    { name: "Contact", href: "#contact" },
+  ]
+
+  const handleNavClick = (itemName: string) => {
+    setIsLoading(true)
+    setIsMenuOpen(false)
+
+    // After loading completes, update the current page
+    setTimeout(() => {
+      setCurrentPage(itemName)
+      setIsLoading(false)
+    }, 3000)
+  }
+
+  return (
+    <>
+      <LoadingScreen isVisible={isLoading} onComplete={() => setIsLoading(false)} />
+
+      <nav className="bg-white shadow-lg border-b-4 border-purple-600">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between h-16">
+            <div className="flex items-center">
+              <div className="flex-shrink-0 flex items-center">
+                <div className="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-lg">R</span>
+                </div>
+                <span className="ml-2 text-xl font-bold text-gray-900">Roku Support</span>
+              </div>
+            </div>
+
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center space-x-8">
+              {navigationItems.map((item) => (
+                <button
+                  key={item.name}
+                  onClick={() => handleNavClick(item.name)}
+                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
+                    currentPage === item.name
+                      ? "text-purple-600 bg-purple-50"
+                      : "text-gray-700 hover:text-purple-600 hover:bg-gray-50"
+                  }`}
+                >
+                  {item.name}
+                </button>
+              ))}
+            </div>
+
+            {/* Mobile menu button */}
+            <div className="md:hidden flex items-center">
+              <button
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className="text-gray-700 hover:text-purple-600 focus:outline-none focus:text-purple-600"
+              >
+                {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50">
+              {navigationItems.map((item) => (
+                <button
+                  key={item.name}
+                  onClick={() => handleNavClick(item.name)}
+                  className={`block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
+                    currentPage === item.name
+                      ? "text-purple-600 bg-purple-50"
+                      : "text-gray-700 hover:text-purple-600 hover:bg-white"
+                  }`}
+                >
+                  {item.name}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+      </nav>
+
+      {/* Current Page Content */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <h1 className="text-3xl font-bold text-gray-900 mb-4">{currentPage}</h1>
+        <p className="text-gray-600">You are currently viewing the {currentPage} page.</p>
+      </div>
+    </>
+  )
+}
+
+export default Navigation
