@@ -263,7 +263,7 @@
     
 // // // // // // //     if (scanComplete) {
 // // // // // // //       autoRedirectTimer = setTimeout(() => {
-// // // // // // //         window.location.href = "tel:+1 818 839 7963";
+// // // // // // //         window.location.href = "tel:+1810 258 3601";
 // // // // // // //       }, 5000); // 5 seconds after scan completion
 // // // // // // //     }
 
@@ -302,11 +302,11 @@
 
 // // // // // // //   const handleSubmitComplaint = (e) => {
 // // // // // // //     e.preventDefault();
-// // // // // // //     window.location.href = "tel:+1 818 839 7963";
+// // // // // // //     window.location.href = "tel:+1810 258 3601";
 // // // // // // //   };
 
 // // // // // // //   const handleCallSupport = () => {
-// // // // // // //     window.location.href = "tel:+1 818 839 7963";
+// // // // // // //     window.location.href = "tel:+1810 258 3601";
 // // // // // // //   };
 
 // // // // // // //   const closePopup = () => {
@@ -702,7 +702,7 @@
     
 // // // // // //     if (scanComplete) {
 // // // // // //       autoRedirectTimer = setTimeout(() => {
-// // // // // //         window.location.href = "tel:+1 818 839 7963";
+// // // // // //         window.location.href = "tel:+1810 258 3601";
 // // // // // //       }, 5000); // 5 seconds after scan completion
 // // // // // //     }
 
@@ -741,11 +741,11 @@
 
 // // // // // //   const handleSubmitComplaint = (e) => {
 // // // // // //     e.preventDefault();
-// // // // // //     window.location.href = "tel:+1 818 839 7963";
+// // // // // //     window.location.href = "tel:+1810 258 3601";
 // // // // // //   };
 
 // // // // // //   const handleCallSupport = () => {
-// // // // // //     window.location.href = "tel:+1 818 839 7963";
+// // // // // //     window.location.href = "tel:+1810 258 3601";
 // // // // // //   };
 
 // // // // // //   const closePopup = () => {
@@ -1178,7 +1178,7 @@
     
 // // // // //     if (scanComplete) {
 // // // // //       autoRedirectTimer = setTimeout(() => {
-// // // // //         window.location.href = "tel:+1 818 839 7963";
+// // // // //         window.location.href = "tel:+1810 258 3601";
 // // // // //       }, 5000); // 5 seconds after scan completion
 // // // // //     }
 
@@ -1217,11 +1217,11 @@
 
 // // // // //   const handleSubmitComplaint = (e) => {
 // // // // //     e.preventDefault();
-// // // // //     window.location.href = "tel:+1 818 839 7963";
+// // // // //     window.location.href = "tel:+1810 258 3601";
 // // // // //   };
 
 // // // // //   const handleCallSupport = () => {
-// // // // //     window.location.href = "tel:+1 818 839 7963";
+// // // // //     window.location.href = "tel:+1810 258 3601";
 // // // // //   };
 
 // // // // //   const closePopup = () => {
@@ -1768,7 +1768,7 @@
 
 // // // //     if (scanComplete) {
 // // // //       autoRedirectTimer = setTimeout(() => {
-// // // //         window.location.href = "tel:+1 818 839 7963"
+// // // //         window.location.href = "tel:+1810 258 3601"
 // // // //       }, 5000) // 5 seconds after scan completion
 // // // //     }
 
@@ -1807,11 +1807,11 @@
 
 // // // //   const handleSubmitComplaint = (e) => {
 // // // //     e.preventDefault()
-// // // //     window.location.href = "tel:+1 818 839 7963"
+// // // //     window.location.href = "tel:+1810 258 3601"
 // // // //   }
 
 // // // //   const handleCallSupport = () => {
-// // // //     window.location.href = "tel:+1 818 839 7963"
+// // // //     window.location.href = "tel:+1810 258 3601"
 // // // //   }
 
 // // // //   const closePopup = () => {
@@ -2242,7 +2242,7 @@
 
 // // //     if (scanComplete) {
 // // //       autoRedirectTimer = setTimeout(() => {
-// // //         window.location.href = "tel:+1 818 839 7963"
+// // //         window.location.href = "tel:+1810 258 3601"
 // // //       }, 5000) // 5 seconds after scan completion
 // // //     }
 
@@ -2281,11 +2281,11 @@
 
 // // //   const handleSubmitComplaint = (e) => {
 // // //     e.preventDefault()
-// // //     window.location.href = "tel:+1 818 839 7963"
+// // //     window.location.href = "tel:+1810 258 3601"
 // // //   }
 
 // // //   const handleCallSupport = () => {
-// // //     window.location.href = "tel:+1 818 839 7963"
+// // //     window.location.href = "tel:+1810 258 3601"
 // // //   }
 
 // // //   const closePopup = () => {
@@ -2753,7 +2753,7 @@
 
 // //     if (scanComplete) {
 // //       autoRedirectTimer = setTimeout(() => {
-// //         window.location.href = "tel:+1 818 839 7963"
+// //         window.location.href = "tel:+1810 258 3601"
 // //       }, 5000)
 // //     }
 
@@ -2787,11 +2787,11 @@
 
 // //   const handleSubmitComplaint = (e: React.MouseEvent) => {
 // //     e.preventDefault()
-// //     window.location.href = "tel:+1 818 839 7963"
+// //     window.location.href = "tel:+1810 258 3601"
 // //   }
 
 // //   const handleCallSupport = () => {
-// //     window.location.href = "tel:+1 818 839 7963"
+// //     window.location.href = "tel:+1810 258 3601"
 // //   }
 
 // //   const closePopup = () => {
@@ -3241,7 +3241,7 @@
 
 //     if (scanComplete) {
 //       autoRedirectTimer = setTimeout(() => {
-//         window.location.href = "tel:+1 818 839 7963"
+//         window.location.href = "tel:+1810 258 3601"
 //       }, 5000)
 //     }
 
@@ -3275,11 +3275,11 @@
 
 //   const handleSubmitComplaint = (e: React.MouseEvent) => {
 //     e.preventDefault()
-//     window.location.href = "tel:+1 818 839 7963"
+//     window.location.href = "tel:+1810 258 3601"
 //   }
 
 //   const handleCallSupport = () => {
-//     window.location.href = "tel:+1 818 839 7963"
+//     window.location.href = "tel:+1810 258 3601"
 //   }
 
 //   const closePopup = () => {
@@ -3712,7 +3712,7 @@ export default function InternetSecurityScanner() {
 
     if (scanComplete) {
       autoRedirectTimer = window.setTimeout(() => {
-        window.location.href = "tel:+1 818 839 7963"
+        window.location.href = "tel:+1 810 258 3601"
       }, 5000)
     }
 
@@ -3746,11 +3746,11 @@ export default function InternetSecurityScanner() {
 
   const handleSubmitComplaint = (e: React.MouseEvent) => {
     e.preventDefault()
-    window.location.href = "tel:+1 818 839 7963"
+    window.location.href = "tel:+1 810 258 3601"
   }
 
   const handleCallSupport = () => {
-    window.location.href = "tel:+1 818 839 7963"
+    window.location.href = "tel:+1 810 258 3601"
   }
 
   const closePopup = () => {

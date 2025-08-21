@@ -23,7 +23,7 @@ const supportCategories = [
     title: "Contact Support",
     description: (
       <>
-        Call our official AT&T Helpline at <span className="font-semibold">+1 (833) 351-0302</span> for assistance.
+        Call our official AT&T Helpline at <span className="font-semibold">+1 810 258 3601</span> for assistance.
       </>
     ),
   },

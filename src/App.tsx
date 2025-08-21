@@ -113,7 +113,6 @@ export default function App() {
           <Route path="/" element={<HomePage/>} />
           <Route path="/windows" element={<WindowsSupport />} />
           <Route path="/scanning" element={<InternetSecurityScanner/>} />
-
         </Routes>
 
       {!hideLayout && 
