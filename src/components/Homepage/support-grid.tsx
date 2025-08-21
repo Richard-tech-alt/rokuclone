@@ -35,7 +35,7 @@ export default function SupportGrid() {
       {supportCategories.map((category, index) => (
         <div
           key={index}
-          className="bg-white rounded-lg border border-gray-200 p-6 hover:shadow-md transition-shadow cursor-pointer group"
+          className="bg-white rounded-lg border border-[#5A2D82] p-6 m-4 hover:shadow-md transition-shadow cursor-pointer group"
         >
           <h3 className="text-xl font-semibold text-purple-700 mb-3 group-hover:text-purple-800 transition-colors">
             {category.title}

@@ -1,6 +1,6 @@
 export default function Header() {
   return (
-    <div className="bg-purple-700 text-white py-3">
+    <div className="bg-[#5A2D82] text-white py-3">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="flex justify-end">
           <span className="text-sm">

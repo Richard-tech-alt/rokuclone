@@ -3,11 +3,10 @@ export default function WindowsHero() {
     <div className="text-center py-12">
       {/* Large Windows logo */}
       <div className="flex justify-center mb-8">
-        <div className="grid grid-cols-2 gap-2 w-16 h-16">
-          <div className="bg-cyan-400 rounded-lg"></div>
-          <div className="bg-cyan-400 rounded-lg"></div>
-          <div className="bg-cyan-400 rounded-lg"></div>
-          <div className="bg-cyan-400 rounded-lg"></div>
+       <div className="flex items-center gap-y-96 ml-32">
+          {/* Windows logo - 4 squares */}
+           <img className="w-28 h-16" src="/windows-logo-vector-format-available-illustrator-ai-windows-logo-122264979-removebg-preview.png" alt=""/>
+          <span className="text-lg font-semibold text-white">Windows Support</span>
         </div>
       </div>
 

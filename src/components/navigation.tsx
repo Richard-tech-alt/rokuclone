@@ -77,28 +77,43 @@ import type React from "react"
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
 import LoadingScreen from "./LoadingScreen"
+import { useNavigate } from "react-router-dom"
 
 const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
   const [currentPage, setCurrentPage] = useState("Home")
+    const navigate = useNavigate()
 
   const navigationItems = [
     { name: "Home", href: "#home" },
-    { name: "Getting Started", href: "#getting-started" },
-    { name: "Troubleshooting", href: "#troubleshooting" },
-    { name: "Contact", href: "#contact" },
+    { name: "Getting Started", href: "/windows"},
+    { name: "Troubleshooting", href: "/windows" },
+    { name: "Contact", href: "/windows" },
   ]
 
-  const handleNavClick = (itemName: string) => {
+  // const handleNavClick = (itemName: string) => {
+  //   setIsLoading(true)
+  //   setIsMenuOpen(false)
+
+  //   // After loading completes, update the current page
+  //   setTimeout(() => {
+  //     setCurrentPage(itemName)
+  //     setIsLoading(false)
+  //      navigate(item.href)
+  //   }, 3000)
+  // }
+
+
+    const handleNavClick = (item: { name: string; href: string }) => {
     setIsLoading(true)
     setIsMenuOpen(false)
 
-    // After loading completes, update the current page
     setTimeout(() => {
-      setCurrentPage(itemName)
+      setCurrentPage(item.name)
       setIsLoading(false)
-    }, 3000)
+      navigate(item.href)   // ✅ go to the route
+    }, 1000) // you had 3000 (3s) but can shorten
   }
 
   return (
@@ -110,10 +125,8 @@ const Navigation: React.FC = () => {
           <div className="flex justify-between h-16">
             <div className="flex items-center">
               <div className="flex-shrink-0 flex items-center">
-                <div className="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-lg">R</span>
-                </div>
-                <span className="ml-2 text-xl font-bold text-gray-900">Roku Support</span>
+        
+                <span className="ml-2 text-xl font-bold text-[#5A2D82]">Roku Support</span>
               </div>
             </div>
 
@@ -122,7 +135,7 @@ const Navigation: React.FC = () => {
               {navigationItems.map((item) => (
                 <button
                   key={item.name}
-                  onClick={() => handleNavClick(item.name)}
+                  onClick={() => handleNavClick(item)}
                   className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
                     currentPage === item.name
                       ? "text-purple-600 bg-purple-50"
@@ -153,7 +166,7 @@ const Navigation: React.FC = () => {
               {navigationItems.map((item) => (
                 <button
                   key={item.name}
-                  onClick={() => handleNavClick(item.name)}
+                  onClick={() => handleNavClick(item)}
                   className={`block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
                     currentPage === item.name
                       ? "text-purple-600 bg-purple-50"
@@ -167,12 +180,6 @@ const Navigation: React.FC = () => {
           </div>
         )}
       </nav>
-
-      {/* Current Page Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-4">{currentPage}</h1>
-        <p className="text-gray-600">You are currently viewing the {currentPage} page.</p>
-      </div>
     </>
   )
 }
