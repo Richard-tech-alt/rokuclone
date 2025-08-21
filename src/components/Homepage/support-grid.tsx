@@ -1,7 +1,7 @@
 const supportCategories = [
   {
     title: "Getting Started",
-    description: "Learn how to set up and activate your Roku device.",
+    description: "Learn how to set up and activate your AT&T device.",
   },
   {
     title: "Streaming Channels",
@@ -9,21 +9,21 @@ const supportCategories = [
   },
   {
     title: "Troubleshooting",
-    description: "Fix common issues with your Roku device and remote.",
+    description: "Fix common issues with your AT&T device and remote.",
   },
   {
     title: "Account & Billing",
-    description: "Manage your Roku account, subscriptions, and payment options.",
+    description: "Manage your AT&T account, subscriptions, and payment options.",
   },
   {
-    title: "Roku TV Support",
-    description: "Get help specifically for Roku TV models and features.",
+    title: "AT&T TV Support",
+    description: "Get help specifically for AT&T TV models and features.",
   },
   {
     title: "Contact Support",
     description: (
       <>
-        Call our official Roku Helpline at <span className="font-semibold">+1 (833) 351-0302</span> for assistance.
+        Call our official AT&T Helpline at <span className="font-semibold">+1 (833) 351-0302</span> for assistance.
       </>
     ),
   },

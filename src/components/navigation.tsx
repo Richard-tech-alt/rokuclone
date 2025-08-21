@@ -16,7 +16,7 @@
 //         <div className="flex items-center justify-between h-16">
 //           {/* Logo */}
 //           <div className="flex-shrink-0">
-//             <h1 className="text-2xl font-bold text-purple-700">Roku Support</h1>
+//             <h1 className="text-2xl font-bold text-purple-700">AT&T Support</h1>
 //           </div>
 
 //           {/* Desktop Navigation */}
@@ -126,7 +126,7 @@ const Navigation: React.FC = () => {
             <div className="flex items-center">
               <div className="flex-shrink-0 flex items-center">
         
-                <span className="ml-2 text-xl font-bold text-[#5A2D82]">Roku Support</span>
+                <span className="ml-2 text-xl font-bold text-[#5A2D82]">AT&T Support</span>
               </div>
             </div>
 

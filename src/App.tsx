@@ -19,7 +19,7 @@
 // //           <p className="text-white text-center text-xs sm:text-sm leading-relaxed">
 // //             <span className="inline-block mr-1">©</span>
 // //             This website is an independent, third-party TV support and is not affiliated with, 
-// //             endorsed by, or sponsored by Roku, Inc. All trademarks and brand names are the 
+// //             endorsed by, or sponsored by AT&T, Inc. All trademarks and brand names are the 
 // //             property of their respective owners.
 // //           </p>
 // //         </div>
@@ -79,7 +79,7 @@
 //            <p className="text-white text-center text-xs sm:text-sm leading-relaxed">
 //              <span className="inline-block mr-1">©</span>
 //              This website is an independent, third-party TV support and is not affiliated with, 
-//              endorsed by, or sponsored by Roku, Inc. All trademarks and brand names are the 
+//              endorsed by, or sponsored by AT&T, Inc. All trademarks and brand names are the 
 //              property of their respective owners.
 //            </p>
 //          </div>
@@ -121,8 +121,8 @@ export default function App() {
          <div className="max-w-7xl mx-auto">
            <p className="text-white text-center text-xs sm:text-sm leading-relaxed">
              <span className="inline-block mr-1">©</span>
-             This website is an independent, third-party TV support and is not affiliated with, 
-             endorsed by, or sponsored by Roku, Inc. All trademarks and brand names are the 
+             This website is an independent, third-party WIFI support and is not affiliated with, 
+             endorsed by, or sponsored by AT&T, Inc. All trademarks and brand names are the 
              property of their respective owners.
            </p>
          </div>
