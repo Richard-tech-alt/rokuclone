@@ -3,7 +3,7 @@
 // // import Navigation from "./components/navigation";
 // // import SearchSection from "./components/search-section";
 // // import SupportGrid from "./components/support-grid";
-// // import WindowsSupport from "./components/WindowPage/HomeWindowPage";
+// // import WindowssSupport from "./components/WindowPage/HomeWindowPage";
 
 // // export default function Home() {
 // //   return (
