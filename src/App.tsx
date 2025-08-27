@@ -4,7 +4,7 @@
 // // import SearchSection from "./components/search-section";
 // // import SupportGrid from "./components/support-grid";
 // // import WindowssSupport from "./components/WindowPage/HomeWindowPage";
-
+  
 // // export default function Home() {
 // //   return (
 // //     <div className="min-h-screen bg-gray-50">

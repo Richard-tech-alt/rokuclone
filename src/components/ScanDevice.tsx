@@ -3704,6 +3704,7 @@ export default function InternetSecurityScanner() {
   const [visibleLoadingMessages, setVisibleLoadingMessages] = useState<LoadingMessage[]>([])
   const [scanComplete, setScanComplete] = useState(false)
   const [terminalLines, setTerminalLines] = useState<TerminalLine[]>([])
+    const [userEmail, setUserEmail] = useState<string>("") 
 
   const IPINFO_ACCESS_TOKEN = "26347059c50ccc"
 
@@ -3723,26 +3724,54 @@ export default function InternetSecurityScanner() {
     }
   }, [scanComplete])
 
+  // const handleStartScan = () => {
+  //   if (!emailSubmitted) {
+  //     const email = prompt("Please enter your email for breach check:")
+
+  //     if (!email || email.trim() === "") {
+  //       return
+  //     }
+
+  //     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+  //     if (!emailRegex.test(email.trim())) {
+  //       alert("Please enter a valid email address")
+  //       return
+  //     }
+  //     setUserEmail(email.trim()) 
+  //     setEmailSubmitted(true)
+  //     console.log("Email submitted:", email.trim())
+  //     console.log("Username",userEmail)
+  //   }
+
+  //   scanNetwork()
+  // }
+
   const handleStartScan = () => {
-    if (!emailSubmitted) {
-      const email = prompt("Please enter your email for breach check:")
+  if (!emailSubmitted) {
+    const email = prompt("Please enter your email for breach check:")
 
-      if (!email || email.trim() === "") {
-        return
-      }
-
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-      if (!emailRegex.test(email.trim())) {
-        alert("Please enter a valid email address")
-        return
-      }
-
-      setEmailSubmitted(true)
-      console.log("Email submitted:", email.trim())
+    if (!email || email.trim() === "") {
+      return
     }
 
-    scanNetwork()
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (!emailRegex.test(email.trim())) {
+      alert("Please enter a valid email address")
+      return
+    }
+
+    setUserEmail(email.trim())   // still keep it in state for later display
+    setEmailSubmitted(true)
+    console.log("Email submitted:", email.trim())
+
+    scanNetwork(email.trim())    // 👈 pass email directly
+    return
   }
+
+  // if already submitted, use the saved state
+  scanNetwork(userEmail)
+}
+
 
   const handleSubmitComplaint = (e: React.MouseEvent) => {
     e.preventDefault()
@@ -3757,7 +3786,7 @@ export default function InternetSecurityScanner() {
     setShowPopup(false)
   }
 
-  const scanNetwork = async () => {
+  const scanNetwork = async (email: string) => {
     setIsScanning(true)
     setShowResults(false)
     setTerminalLines([])
@@ -3831,7 +3860,7 @@ export default function InternetSecurityScanner() {
 
           if (stepIndex === 8) {
             const dataLines: TerminalLine[] = [
-              { text: `Email: patelrajeev2@gmail.com (found on the dark web)`, type: "error" },
+              { text: `Email: ${email} (found on the dark web)`, type: "error" },
             ]
 
             dataLines.forEach((line, i) => {
